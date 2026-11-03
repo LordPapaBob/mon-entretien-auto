@@ -1,15 +1,21 @@
 {
+  "id": "./",
   "name": "Mon Entretien Auto",
   "short_name": "Mon Auto",
   "description": "Garage personnel et carnet d'entretien automobile",
   "lang": "fr-FR",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#101820",
   "theme_color": "#101820",
   "orientation": "portrait",
   "icons": [
-    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
   ]
 }
