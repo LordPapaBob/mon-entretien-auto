@@ -1,11 +1,11 @@
 {
   "name": "mon-entretien-auto",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.1-test",
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "vite build",
+    "build": "vite build && node scripts/prepare-pwa.mjs",
     "preview": "vite preview --host 0.0.0.0"
   },
   "devDependencies": {

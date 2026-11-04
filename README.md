@@ -1,54 +1,35 @@
-# Mon Entretien Auto — V0.1
+# Mon Entretien Auto — V0.2.1 TEST
 
-Prototype PWA personnel, gratuit et sans compte. Les données sont conservées dans le stockage local du navigateur (`localStorage`).
+Application automobile personnelle, gratuite et sans compte : https://lordpapabob.github.io/mon-entretien-auto/
 
-## Fonctionnalités de cette V0.1
-- Garage prérempli avec la Dacia Sandero Stepway III 2022 TCe 90 et la Fiat Punto 2012 1.2 FIRE 69 ch équipée d'un boîtier E85.
-- Modification des fiches et kilométrages.
-- Carnet d'entretien : ajout/suppression d'opérations, date, kilométrage, coût, notes et intervalle kilométrique.
-- Module « Coût annuel » : dépenses de carburant, entretien, pneus, réparations, assurance, contrôle technique, financement et autres.
-- Dépenses annuelles et totales, répartition par catégorie et comparaison par véhicule.
-- Export et import JSON.
-- Interface responsive et PWA avec cache de base hors connexion.
+## Version actuelle
 
-## Lancer sur Windows 10
+- Garage multivéhicules initialement vide, fiches modifiables et photo personnelle.
+- Onze silhouettes génériques par carrosserie, dont SUV, Tout-terrain / 4×4 et Pick-up.
+- Entretien rapide ou détaillé avec note, facture image/PDF, consultation Détails puis Éditer.
+- Compteur partagé entre entretien, dépenses, problèmes et pneus ; avertissement sur relevé inférieur.
+- Échéances kilométriques calculées selon les intervalles saisis ; intervalle en mois stocké, calcul calendaire non intégré.
+- Dépense liée actualisée lors de l'édition d'une intervention, sans doublon.
+- Suivi des problèmes, pneus, dépenses et documents ; export/import JSON avec médias.
+- Générateur permanent de voitures fictives, clairement identifiées et supprimables séparément.
 
-### Prérequis
-- Node.js LTS : https://nodejs.org/
-- Un navigateur récent (Chrome ou Edge conseillé).
+Version expérimentale : certains modules et scénarios restent à tester. Aucun diagnostic automatisé ni préconisation constructeur n'est inventé. OCR, suivi des pleins, comptes et communauté ne sont pas intégrés.
 
-### Installation
-1. Décompresser l'archive.
-2. Ouvrir PowerShell dans le dossier `mon-entretien-auto-v0.1`.
-3. Installer les dépendances :
-   ```powershell
-   npm install
-   ```
-4. Démarrer le serveur :
-   ```powershell
-   npm run dev
-   ```
-5. Ouvrir l'adresse indiquée par Vite, généralement `http://localhost:5173`.
+## Android
 
-## Installer sur Android
-Pour une première vérification, le téléphone et le PC doivent être sur le même réseau Wi-Fi.
-1. Lancer `npm run dev -- --host 0.0.0.0`.
-2. Repérer l'adresse réseau locale affichée par Vite, par exemple `http://192.168.1.20:5173`.
-3. Ouvrir cette adresse dans Chrome Android.
-4. Pour une installation PWA complète, il faut une origine sécurisée (HTTPS ou localhost). En réseau local HTTP, le site fonctionne pour tester mais l'installation PWA et le service worker peuvent être limités. Pour une installation durable gratuite, héberger ensuite le dossier `dist` sur un hébergement statique gratuit proposant HTTPS, ou utiliser un tunnel HTTPS gratuit temporaire pour les essais.
-5. Dans Chrome, menu ⋮ > « Installer l'application » ou « Ajouter à l'écran d'accueil » lorsque l'option est proposée.
+Ouvrir le site HTTPS dans Chrome Android, puis utiliser le menu du navigateur pour l'installer ou l'ajouter à l'écran d'accueil si l'option est proposée. Après une mise à jour, ouvrir avec une connexion puis fermer et rouvrir si nécessaire.
 
-## Construire la version de production
-```powershell
-npm run build
-npm run preview
-```
-Le dossier `dist` contient le site prêt à être hébergé.
+Les données restent locales à chaque appareil et navigateur. Les données du PC ne sont pas automatiquement présentes sur le téléphone. Exporter une sauvegarde avant toute manipulation de données importantes. Le stockage V0.2 utilise mon-entretien-auto-v02 et IndexedDB pour les médias ; aucune migration automatique de V0.1 n'est incluse.
 
-## Important
-- Les données sont locales au navigateur et à l'appareil. Elles ne se synchronisent pas entre appareils.
-- Exporter régulièrement un fichier JSON depuis Paramètres > Exporter mes données.
-- Cette V0.1 ne récupère pas les préconisations constructeur et n'invente aucune périodicité. Les intervalles sont saisis manuellement.
-- Le coût/km affiché est indicatif : total des dépenses saisies divisé par le kilométrage actuel, et non un coût d'usage complet depuis l'origine.
-- Les dépenses liées à une opération d'entretien sont ajoutées automatiquement au module de coûts. Une dépense manuelle est indépendante.
-- Les notifications, la communauté, la recherche par plaque et les recommandations vérifiées sont hors périmètre de cette première version.
+## Développement Windows
+
+Installer : npm.cmd install
+Démarrer : npm.cmd run dev
+Compiler : npm.cmd run build
+Prévisualiser : npm.cmd run preview
+
+Stack : Vite, JavaScript natif, CSS, manifeste PWA et service worker. Base : /mon-entretien-auto/.
+
+La compilation prépare dist, précache les ressources et calcule une version de cache depuis le contenu. La branche main conserve les sources ; gh-pages contient le site compilé. Les sauvegardes locales de développement sont ignorées par Git.
+
+Références : [feuille de route](ROADMAP.md), [journal](JOURNAL_DEVELOPPEMENT.md), [texte vidéo](VIDEO_MISE_A_JOUR_2026-11-04.md).
