@@ -174,6 +174,16 @@ Tester le carnet d'entretien selon la séquence de la feuille de route : rapide,
 - Couleur de carrosserie reportée explicitement par l'utilisateur (IDEE-09).
 - Vérifications préparatoires : compilation réussie, 7 ressources précachées, build `900723af0797`, 18 assertions entretien réussies. Publication et vérification à suivre.
 
+## 2026-11-04 — Livraison GitHub Pages confirmée
+
+- Sources publiées sur `main` : commit `a7886b0`.
+- Site compilé publié sur `gh-pages` : commit `2c5daca362aefebdabdebcb3f1b9306874617fcb`, build `900723af0797`. Historique préservé, aucun push forcé. Anciens assets compilés non référencés conservés sur la branche de publication.
+- Déploiement GitHub Pages : [exécution 41927000034](https://github.com/LordPapaBob/mon-entretien-auto/actions/runs/41927000034), terminé avec succès.
+- Vérifications publiques : page et version.json répondent HTTP 200 ; version `0.2.1-test`, nouveau bundle `index-BjXdT9E1.js` et service worker portant le hash du build effectivement servis.
+- Site : https://lordpapabob.github.io/mon-entretien-auto/ . Sur Android : ouvrir avec connexion dans Chrome, installer depuis le menu si proposé ; fermer/rouvrir après mise à jour si nécessaire. Aucun effacement des données requis. Les données locales du PC ne sont pas synchronisées vers le téléphone.
+- Texte court de présentation vidéo livré dans `VIDEO_MISE_A_JOUR_2026-11-04.md` et dans la réponse de livraison.
+- État : publication réalisée ; essais sur appareil Android réel à effectuer par le porteur du projet. Aucune autorisation permanente de publier les versions futures.
+
 ## Modèle d'entrée future
 
 ```markdown

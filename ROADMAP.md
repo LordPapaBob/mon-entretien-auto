@@ -52,6 +52,8 @@ Modules retrouvés dans le code local le 4 novembre 2026 ; leur présence ne con
 
 ## En cours
 
+Livraison du 04/11/2026 : V0.2.1 TEST publiée avec autorisation explicite sur https://lordpapabob.github.io/mon-entretien-auto/ ; déploiement GitHub Pages réussi et réponses HTTP 200 confirmées (version, page, nouveau bundle et service worker). Prochaine étape : utilisation et tests Android ; autres modules à poursuivre. Couleur véhicule reportée.
+
 04/11/2026 — 11 silhouettes SVG génériques intégrées : Citadine, Compacte, Berline, Break, SUV, Tout-terrain / 4×4, Pick-up, Monospace, Coupé, Cabriolet et Utilitaire. Photo personnelle prioritaire. Compilation, profils distincts et rendu garage vérifiés ; appréciation visuelle utilisateur en attente.
 
 04/11/2026 — Parcours Détails ajusté : fiche de consultation en lecture seule avec photo/PDF, puis bouton Éditer ouvrant directement tous les champs détaillés. Synchronisation coût/kilométrage/échéances couverte par 18 assertions ; navigation consultation → édition vérifiée dans le navigateur, sans modifier les données utilisateur. Validation utilisateur à poursuivre.
